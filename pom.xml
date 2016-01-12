@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>es.egc</groupId>
-  <artifactId>ex1</artifactId>
-  <version>3.0</version>
+  <artifactId>28840746B</artifactId>
+  <version>3.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>ex1</name>
@@ -21,11 +21,20 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-	<dependency>
-      <groupId>j4Text</groupId>
-      <artifactId>jtext</artifactId>
-      <version>0.1.-SNAPSHOT</version>	
-    </dependency>
   </dependencies>
-
+<build>
+		<testOutputDirectory>${project.build.directory}/reportesTest</testOutputDirectory>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.19.1</version>
+				<configuration>
+                  <printSummary>false</printSummary>
+                </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
